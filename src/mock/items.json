@@ -1,0 +1,52 @@
+[
+  {
+    "linkImage": "https://images-americanas.b2w.io/produtos/83563842/imagens/guarda-roupa-casal-madesa-monaco-3-portas-de-correr-com-espelho/83563843_1_large.jpg",
+    "title": "Guarda-roupa",
+    "shortDescription": "Um lindo guarda-roupa que está em bom estado, mas estou querendo doar.",
+    "address": {
+      "bairro": "São Francisco",
+      "municipio": "Cariacica",
+      "uf": "ES"
+    }
+  },
+  {
+    "linkImage": "https://cdn.pixabay.com/photo/2013/10/03/23/19/bike-190483_960_720.jpg",
+    "title": "Bicicleta",
+    "shortDescription": "Uma bicicleta muito boa.",
+    "address": {
+      "bairro": "Morada de Laranjeiras",
+      "municipio": "Serra",
+      "uf": "ES"
+    }
+  },
+  {
+    "linkImage": "https://cdn.pixabay.com/photo/2015/02/01/22/37/hourglass-620397_960_720.jpg",
+    "title": "Ampulheta",
+    "shortDescription": "Uma ampulheta que ganhei como um brinde, mas não uso.",
+    "address": {
+      "bairro": "Porto Canoa",
+      "municipio": "Serra",
+      "uf": "ES"
+    }
+  },
+  {
+    "linkImage": "https://cdn.pixabay.com/photo/2013/11/07/21/04/boat-207129_960_720.jpg",
+    "title": "Barco de pesca",
+    "shortDescription": "Um barco de pesque que tenho há muitos anos. Vou me mudar e preciso doar.",
+    "address": {
+      "bairro": "Santo Antônio",
+      "municipio": "Vitória",
+      "uf": "ES"
+    }
+  },
+  {
+    "linkImage": "https://cdn.pixabay.com/photo/2017/06/20/23/15/coffee-2425303_960_720.jpg",
+    "title": "Notebook",
+    "shortDescription": "Um notebook da DELL com defeito que desejo doar.",
+    "address": {
+      "bairro": "Bento Ferreira",
+      "municipio": "Vitória",
+      "uf": "ES"
+    }
+  }
+]

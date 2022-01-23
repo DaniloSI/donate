@@ -1,38 +1,24 @@
+import { useState, useEffect } from 'react';
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import AppBar from '@/components/AppBar';
-import Item from '@/components/Teste/Item';
+import AutocompleteTags from '@/components/AutocompleteTags';
+import Item from '@/components/Item';
+import { IItem } from '@/interfaces/item';
 import { Box, Container, Paper, Typography } from '@mui/material';
+import axios from 'axios';
 
 const Home: NextPage = () => {
-  const items = [
-    {
-      linkImage:
-        'https://images-americanas.b2w.io/produtos/83563842/imagens/guarda-roupa-casal-madesa-monaco-3-portas-de-correr-com-espelho/83563843_1_large.jpg',
-      title: 'Guarda-roupa',
-      shortDescription: 'Um lindo guarda-roupa que está em bom estado, mas estou querendo doar.',
-      address: 'Av. Mário Gurgel, 5353 - São Francisco, Cariacica - ES, 29140-000',
-    },
-    {
-      linkImage: 'https://cdn.pixabay.com/photo/2013/10/03/23/19/bike-190483_960_720.jpg',
-      title: 'Bicicleta',
-      shortDescription: 'Uma bicicleta muito boa.',
-      address: '29166-828, Av. Paulo Pereira Gomes, 40 - Morada de Laranjeiras, Serra - ES, 29166-935',
-    },
-    {
-      linkImage: 'https://cdn.pixabay.com/photo/2015/02/01/22/37/hourglass-620397_960_720.jpg',
-      title: 'Ampulheta',
-      shortDescription: 'Uma ampulheta que ganhei como um brinde, mas não uso.',
-      address: 'Av. Porto Canoa, 132 - Porto Canoa, Serra - ES, 29168-345',
-    },
-    {
-      linkImage: 'https://cdn.pixabay.com/photo/2013/11/07/21/04/boat-207129_960_720.jpg',
-      title: 'Barco de pesca',
-      shortDescription: 'Um barco de pesque que tenho há muitos anos. Vou me mudar e preciso doar.',
-      address: 'R. Ernesto Bassini, 188 - Santo Antônio, Vitória - ES, 29026-225',
-    },
-  ];
+  const [items, setItems] = useState<IItem[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      const response = await axios.get('/api/items');
+      setItems(response.data);
+    })();
+  }, []);
 
   return (
     <div>
@@ -46,14 +32,21 @@ const Home: NextPage = () => {
       <Container maxWidth="xl" sx={{ mt: 12 }}>
         <Box sx={{ display: 'flex' }}>
           <Box component="aside" sx={{ width: 432, mr: 2 }}>
-            <Paper variant="outlined" sx={{ p: 4 }}>
+            <Paper elevation={0} sx={{ p: 2 }}>
               <Typography variant="h6">Filtro</Typography>
+              <Box
+                sx={{
+                  '& .MuiTextField-root': { mt: 4 },
+                }}
+              >
+                <AutocompleteTags />
+              </Box>
             </Paper>
           </Box>
           <Box component="main" sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'stretch' }}>
             {items.map((item) => (
-              <Box key={item.title} sx={{ p: 2 }}>
-                <Item {...item} />
+              <Box key={item.title} sx={{ p: 1 }}>
+                <Item item={item} />
               </Box>
             ))}
           </Box>

@@ -20,6 +20,8 @@
       "@/components/*": ["src/components/*"],
       "@/styles/*": ["src/styles/*"],
       "@/lib/*": ["src/lib/*"],
+      "@/mock/*": ["src/mock/*"],
+      "@/interfaces/*": ["src/interfaces/*"],
     },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "generators/plopfile.js"],

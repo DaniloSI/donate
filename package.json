@@ -1,11 +1,11 @@
 {
-  "name": "next-boilerplate",
+  "name": "donate",
   "version": "1.0.0",
   "private": true,
   "author": {
-    "email": "douglas.hsp2019@gmail.com",
-    "name": "Douglas Henrique",
-    "url": "https://dougdev.com.br/"
+    "email": "danilodeoliveira94@gmail.com",
+    "name": "Danilo de Oliveira",
+    "url": "https://github.com/DaniloSI/donate"
   },
   "scripts": {
     "dev": "next dev",
@@ -23,7 +23,7 @@
     "@fontsource/roboto": "^4.5.1",
     "@mui/icons-material": "^5.3.0",
     "@mui/material": "^5.3.0",
-    "axios": "^0.24.0",
+    "axios": "^0.25.0",
     "next": "12.0.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -50,7 +50,6 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "jest": "^27.3.1",
-    "plop": "^2.7.6",
     "prettier": "2.5.0",
     "ts-jest": "^27.0.7",
     "typescript": "4.5.2"

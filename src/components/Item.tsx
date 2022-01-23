@@ -1,19 +1,17 @@
 import React from 'react';
 
-import { LocationOn } from '@mui/icons-material';
+import { IItem } from '@/interfaces/item';
 import { Card, CardContent, CardMedia, Typography, Button, CardActions, Box } from '@mui/material';
 
 type Props = {
-  linkImage: string;
-  title: string;
-  shortDescription: string;
-  address: string;
+  item: IItem;
 };
 
-const Item: React.FC<Props> = ({ linkImage, title, shortDescription, address }) => {
+const Item: React.FC<Props> = ({ item }) => {
+  const { linkImage, title, shortDescription, address } = item;
   return (
     <Card sx={{ maxWidth: 256, height: '100%', display: 'flex', flexDirection: 'column' }}>
-      <CardMedia component="img" height="256" image={linkImage} alt="Item" />
+      <CardMedia component="img" height="200" image={linkImage} alt="Item" />
       <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
         <Box component="article">
           <Typography gutterBottom variant="h5" component="div">
@@ -23,8 +21,9 @@ const Item: React.FC<Props> = ({ linkImage, title, shortDescription, address }) 
             {shortDescription}
           </Typography>
         </Box>
-        <Box component="address" sx={{ mt: 4 }}>
-          <LocationOn fontSize="small" /> {address}
+        <Box component="address" sx={{ mt: 2 }}>
+          <Typography variant="body2">{address.bairro}</Typography>
+          <Typography variant="body2">{`${address.municipio} - ${address.uf}`}</Typography>
         </Box>
       </CardContent>
 
