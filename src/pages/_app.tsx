@@ -1,6 +1,7 @@
 import '@/styles/globals.scss';
 import type { AppProps } from 'next/app';
 
+import AppBar from '@/components/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import '@fontsource/roboto/700.css';
@@ -12,7 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <CssBaseline />
-      <Component {...pageProps} />
+      <AppBar>
+        <Component {...pageProps} />
+      </AppBar>
     </>
   );
 }

@@ -22,6 +22,7 @@
       "@/lib/*": ["src/lib/*"],
       "@/mock/*": ["src/mock/*"],
       "@/interfaces/*": ["src/interfaces/*"],
+      "@/services/*": ["src/services/*"],
     },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "generators/plopfile.js"],
